@@ -1,5 +1,27 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## fork sepolia to local
+
+```js
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: "0.8.27",
+  defaultNetwork: "hardhat",
+  networks: {
+    hardhat: {
+      // chainId: 31337,
+      forking: {
+        // url: "https://eth-mainnet.g.alchemy.com/v2/716tmTgN95MVQCemb_1GFOCuut89RU0B",
+        // url: "https://eth-holesky.g.alchemy.com/v2/716tmTgN95MVQCemb_1GFOCuut89RU0B",
+        url: "https://eth-sepolia.g.alchemy.com/v2/716tmTgN95MVQCemb_1GFOCuut89RU0B",
+      },
+    },
+  },
+};
+```
+
 ## Getting Started
 
 First, run the development server:
