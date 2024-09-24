@@ -1,14 +1,12 @@
+import { createPool } from '@/context'
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
-
-import { createPool } from '../context'
 
 const NOUFUNGIBLE_POSITION_MANAGER_ADDRESS = process.env.NEXT_PUBLIC_NonfungiblePositionManager
 
 const MAX_FEE_PER_GAS = 100000000000
 const MAX_PRIORITY_FEE_PER_GAS = 100000000000
-
-const index = () => {
+const AddLiquidityIndex = () => {
   // //
   // const doExe = async () => {
   //   const contractData = await readContract();
@@ -90,4 +88,4 @@ const index = () => {
   )
 }
 
-export default index
+export default AddLiquidityIndex
